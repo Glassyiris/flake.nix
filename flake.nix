@@ -4,7 +4,7 @@
   inputs = {
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
-      nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvimdots.url = "github:ayamir/nvimdots";
