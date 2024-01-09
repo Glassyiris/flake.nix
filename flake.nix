@@ -15,8 +15,9 @@
       environment.systemPackages =
         [ 
           pkgs.vim
-          pkgs.vscode
           pkgs.neofetch
+          pkgs.git
+          pkgs.iterm2
         ];
 
       # Auto upgrade nix package and the daemon service.
