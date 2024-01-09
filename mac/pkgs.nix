@@ -3,7 +3,12 @@
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [ pkgs.vim pkgs.neofetch pkgs.git pkgs.iterm2 ];
+  environment.systemPackages = [ 
+    pkgs.vim 
+    pkgs.neofetch 
+    pkgs.git 
+    pkgs.iterm2 
+  ];
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;
@@ -16,7 +21,7 @@
   programs.fish.enable = true;
 
   # Set Git commit hash for darwin-version.
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+  system.configurationRevision = null;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
