@@ -2,10 +2,8 @@
   description = "Example Darwin system flake";
 
   inputs = {
-    nix-darwin = {
-      url = "github:LnL7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvimdots.url = "github:ayamir/nvimdots";
     home-manager = {
