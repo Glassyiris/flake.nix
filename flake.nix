@@ -2,9 +2,16 @@
   description = "Example Darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      nixpkgs.follows = "nixpkgs";
+    };
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nvimdots.url = "github:ayamir/nvimdots";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
@@ -13,7 +20,7 @@
     # $ darwin-rebuild build --flake .#irisdeMac-Pro
     darwinConfigurations."irisdeMac-Pro" = nix-darwin.lib.darwinSystem {
       modules = [ 
-        ./mac/pkgs.nix
+        ./mac
       ];
     };
 

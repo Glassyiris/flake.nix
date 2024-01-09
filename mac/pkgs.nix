@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, neovimd,... }:
 
 {
   # List packages installed in system profile. To search by name, run:
@@ -7,7 +7,7 @@
     pkgs.vim 
     pkgs.neofetch 
     pkgs.git 
-    pkgs.iterm2 
+    pkgs.iterm2
   ];
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
