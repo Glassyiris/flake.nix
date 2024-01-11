@@ -26,11 +26,11 @@
             add_newline = false;
             aws.disabled = true;
             gcloud.disabled = true;
-            line_break.disabled = true;
+            # line_break.disabled = true;
 
             time.disabled = false;
 
-            format = "$directory$character";
+            format = "$directory\n$character";
             right_format = "$all$time";
 
             character.success_symbol = "[~>](purple)";
