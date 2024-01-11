@@ -15,11 +15,6 @@
             export PATH="/etc/profiles/per-user/$USER/bin:$PATH"
 
             zoxide init fish --cmd x | source
-
-            # pure set
-            set --universal pure_enable_single_line_prompt true
-            set --universal pure_show_system_time true
-            set --universal pure_color_system_time pure_color_mute
         '';
 
         plugins = [];
