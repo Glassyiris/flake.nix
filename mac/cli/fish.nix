@@ -28,10 +28,12 @@
             gcloud.disabled = true;
             line_break.disabled = true;
 
-            format = "$character";
-            right_format = "$all";
+            time.disabled = false;
 
-            character.symbol = "[~>](bold purple)";
+            format = "$directory$character";
+            right_format = "$all$time";
+
+            character.success_symbol = "[~>](bold purple)";
         };
     };
 
