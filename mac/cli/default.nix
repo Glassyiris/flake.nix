@@ -3,5 +3,6 @@
 {
     imports = [
         # ./nvim.nix
+        ./fish.nix
     ];
 }

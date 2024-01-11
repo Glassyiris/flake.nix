@@ -15,7 +15,8 @@
     # $ darwin-rebuild build --flake .#irisdeMac-Pro
     darwinConfigurations."irisdeMac-Pro" =
       nix-darwin.lib.darwinSystem { 
-        modules = [ 
+        modules = [
+          home-manager.darwinModules.home-manager
           ./mac 
         ]; 
       };

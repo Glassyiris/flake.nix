@@ -3,6 +3,6 @@
 {
     imports = [
         ./pkgs.nix
-        ./cli
+        ./home.nix
     ]
 }
