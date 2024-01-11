@@ -51,6 +51,8 @@
       lsd
       bat
       fira-code-nerdfont
+
+      zoxide
     ];
 
     imports = [ ./cli ];
