@@ -33,7 +33,7 @@
             format = "$directory$character";
             right_format = "$all$time";
 
-            character.success_symbol = "[~>](bold purple)";
+            character.success_symbol = "[~>](purple)";
         };
     };
 
