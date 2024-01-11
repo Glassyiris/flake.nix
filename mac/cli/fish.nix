@@ -30,6 +30,8 @@
 
             format = "$character";
             right_format = "$all";
+
+            character.symbol = "[~>](bold purple)";
         };
     };
 
