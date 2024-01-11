@@ -30,10 +30,11 @@
 
             time.disabled = false;
 
-            format = "$directory\n$character";
+            format = "$username@$hostname$directory\n$character";
             right_format = "$all$time";
 
-            character.success_symbol = "[~>](purple)";
+            character.success_symbol = "[✡︎](green)[~>](purple)";
+            character.error_symbol = "[✡︎](read)[~>](purple)";
         };
     };
 
