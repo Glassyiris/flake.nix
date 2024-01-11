@@ -1,4 +1,4 @@
-{ config, pkgs, home-manager, ... }:
+{ config, pkgs, home-manager, lib, ... }:
 
 {
   home-manager.useGlobalPkgs = true;
@@ -6,7 +6,7 @@
   home-manager.users.iris = {
     # 注意修改这里的用户名与用户目录
     home.username = "iris";
-    home.homeDirectory = "/Users/iris";
+    home.homeDirectory = lib.mkForce "/Users/iris";
 
     # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
     # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -50,11 +50,13 @@
       file
       lsd
       bat
+      fira-code-nerdfont
     ];
 
     imports = [ ./cli ];
 
     home.stateVersion = "24.05";
+    fonts.fontconfig.enable = true;
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;

@@ -10,11 +10,12 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, ... }: {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#irisdeMac-Pro
     darwinConfigurations."irisdeMac-Pro" =
-      nix-darwin.lib.darwinSystem { 
+      nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           home-manager.darwinModules.home-manager
           ./mac 
