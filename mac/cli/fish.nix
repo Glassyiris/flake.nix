@@ -13,8 +13,10 @@
         interactiveShellInit = ''
             export PATH="/run/current-system/sw/bin:$PATH"
             export PATH="/etc/profiles/per-user/$USER/bin:$PATH"
+            export PATH="$HOME/.pyenv/shims:$PATH"
 
             zoxide init fish --cmd x | source
+            atuin init fish | source
         '';
 
         plugins = [];
@@ -38,4 +40,18 @@
         };
     };
 
+    programs.pyenv = {
+        enable = true;
+    };
+
+    programs.atuin = {
+        enable = true;
+        enableFishIntegration = true;
+        settings = {
+            auto_sync = true;
+            sync_frequency = "5m";
+            sync_address = "https://api.atuin.sh";
+            search_mode = "prefix";
+        };
+    };
 }
