@@ -17,6 +17,8 @@
 
             zoxide init fish --cmd x | source
             atuin init fish | source
+
+            source ~/.cargo/env
         '';
 
         plugins = [];

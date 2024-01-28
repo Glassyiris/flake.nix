@@ -18,7 +18,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           home-manager.darwinModules.home-manager
-          ./mac 
+          ./mac
         ]; 
       };
 

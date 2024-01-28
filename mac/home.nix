@@ -53,6 +53,7 @@
       fira-code-nerdfont
       nix-prefetch-github
       nix-prefetch-git
+      rustup
 
       zoxide
     ];
