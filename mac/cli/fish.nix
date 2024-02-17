@@ -14,11 +14,12 @@
             export PATH="/run/current-system/sw/bin:$PATH"
             export PATH="/etc/profiles/per-user/$USER/bin:$PATH"
             export PATH="$HOME/.pyenv/shims:$PATH"
+            export PATH="$HOME/.cargo/bin:$PATH"
 
             zoxide init fish --cmd x | source
             atuin init fish | source
 
-            source ~/.cargo/env
+            
         '';
 
         plugins = [];
