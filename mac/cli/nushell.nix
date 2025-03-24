@@ -6,7 +6,7 @@
           enable = true;
           
           # 使用相对路径指向配置文件
-          configFile.source = ./nushell/config.nu;
+          configFile.source = ./config/nushell.nu;
           
           extraConfig = ''
             # 确保基础功能正常工作

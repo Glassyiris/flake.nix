@@ -8,9 +8,14 @@
     pkgs.neofetch 
     pkgs.git 
     pkgs.iterm2
+    pkgs.nushell
   ];
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+
+  environment.etc.shells.text = ''
+    /etc/profiles/per-user/iris/bin/nu
+  '';
+
+
   # nix.package = pkgs.nix;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

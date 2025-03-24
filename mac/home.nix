@@ -50,7 +50,7 @@
       file
       lsd
       bat
-      fira-code-nerdfont
+      nerd-fonts.fira-code
       nix-prefetch-github
       nix-prefetch-git
       rustup
