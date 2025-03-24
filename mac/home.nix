@@ -56,6 +56,8 @@
       rustup
 
       zoxide
+      openssl
+      nushell
     ];
 
     imports = [ ./cli ];
